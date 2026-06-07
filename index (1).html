@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Prachi Shivangekar — Outdoor Facilitator & Trek Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --gd:#1C3A2B;--gm:#2E5940;--gl:#4A8C62;--gp:#C4DBC9;
+  --sand:#E8DFD0;--sd:#BFB09A;--w:#FAF8F4;
+  --br:#3D2B1A;--brl:#7A5C3E;--go:#C49A3C;--gol:#E8C46A;
+  --tb:#2C2016;--tm:#6B5B45;
+}
+body{font-family:'Outfit',sans-serif;background:var(--w);color:var(--tb);overflow-x:hidden}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-thumb{background:var(--gl)}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:999;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1.1rem 4rem;
+  background:rgba(250,248,244,0.93);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(196,154,60,0.15);
+  transition:padding 0.3s;
+}
+.nl{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--gd)}
+.nl span{color:var(--go);font-style:italic}
+.nlinks{display:flex;gap:2.2rem;list-style:none}
+.nlinks a{font-size:0.78rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:var(--tm);transition:color 0.25s}
+.nlinks a:hover{color:var(--gd)}
+.ncta{font-size:0.73rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;padding:0.6rem 1.4rem;background:var(--gd);color:var(--w);transition:background 0.25s}
+.ncta:hover{background:var(--gm)}
+
+/* HERO */
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:72px;background:var(--gd);position:relative;overflow:hidden}
+.hl{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 7rem 5rem}
+.eyebrow{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gol);margin-bottom:1.8rem}
+.eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--go)}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,5.5vw,5.5rem);font-weight:600;line-height:1.02;color:var(--w)}
+h1 em{font-style:italic;color:var(--gol)}
+.htagline{margin-top:1.8rem;font-size:1.02rem;font-weight:300;line-height:1.85;color:rgba(255,255,255,0.6);max-width:420px}
+.hdiv{margin:2.5rem 0;width:48px;height:1px;background:rgba(200,180,120,0.35)}
+.pills{display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:2.5rem}
+.pill{font-size:0.7rem;font-weight:500;letter-spacing:1px;padding:0.4rem 1rem;border:1px solid rgba(196,154,60,0.35);color:var(--gol);background:rgba(196,154,60,0.07)}
+.hbtns{display:flex;gap:1rem;flex-wrap:wrap}
+.bp{display:inline-block;padding:0.85rem 2rem;font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;text-decoration:none;background:var(--go);color:var(--br);transition:all 0.25s}
+.bp:hover{background:var(--gol);transform:translateY(-2px)}
+.bg{display:inline-block;padding:0.85rem 2rem;font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(255,255,255,0.22);color:rgba(255,255,255,0.8);transition:all 0.25s}
+.bg:hover{border-color:var(--go);color:var(--gol)}
+.hr2{position:relative;z-index:2;overflow:hidden}
+.hphoto{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:brightness(0.8) saturate(0.88)}
+.hphover{position:absolute;inset:0;background:linear-gradient(to right,var(--gd) 0%,transparent 30%),linear-gradient(to top,var(--gd) 0%,transparent 35%)}
+.hph{width:100%;height:100%;min-height:520px;background:linear-gradient(135deg,var(--gm),var(--gl));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
+.phi{font-size:3rem;opacity:0.2}
+.pht{font-size:0.68rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.25)}
+.statbar{position:absolute;bottom:0;left:0;right:0;z-index:3;display:flex;background:rgba(22,50,35,0.88);backdrop-filter:blur(8px);border-top:1px solid rgba(196,154,60,0.18)}
+.stat{flex:1;padding:1.4rem 2rem;border-right:1px solid rgba(196,154,60,0.1);text-align:center}
+.stat:last-child{border-right:none}
+.sn{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:600;color:var(--gol);line-height:1}
+.sl{font-size:0.63rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:0.3rem}
+
+/* SECTION LABELS */
+.slb{font-size:0.68rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--go);margin-bottom:0.8rem;display:flex;align-items:center;gap:0.7rem}
+.slb::before{content:'';display:block;width:20px;height:1px;background:var(--go)}
+.slb-w{color:var(--gol)}
+.slb-w::before{background:var(--gol)}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:600;color:var(--gd);line-height:1.15}
+h2 em{font-style:italic;color:var(--go)}
+h2.w{color:var(--w)}
+h2.w em{color:var(--gol)}
+
+/* ABOUT */
+#about{display:grid;grid-template-columns:1fr 1fr;background:var(--w)}
+.aic{position:relative;min-height:600px;overflow:hidden}
+.aic img{width:100%;height:100%;object-fit:cover;display:block}
+.aiph{width:100%;height:100%;background:linear-gradient(160deg,var(--gp),var(--sand));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
+.atf{position:absolute;bottom:2.5rem;right:0;background:var(--go);padding:0.8rem 1.5rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--br);font-weight:600}
+.ac{padding:5.5rem 5rem;display:flex;flex-direction:column;justify-content:center}
+.ab{margin-top:1.5rem;font-size:1rem;font-weight:300;line-height:1.9;color:var(--tm)}
+.ab strong{font-weight:600;color:var(--gd)}
+.aq{margin-top:2.5rem;padding:1.4rem 1.8rem;border-left:2px solid var(--go);background:rgba(196,154,60,0.05);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:var(--gd);line-height:1.6}
+.stags{margin-top:2rem;display:flex;flex-wrap:wrap;gap:0.5rem}
+.stag{font-size:0.7rem;font-weight:500;letter-spacing:1px;padding:0.35rem 0.9rem;background:var(--sand);color:var(--br)}
+
+/* OFFER */
+#offer{padding:7rem 5rem;background:var(--gd)}
+.oh{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem}
+.osub{max-width:340px;font-size:0.92rem;font-weight:300;color:rgba(255,255,255,0.45);line-height:1.75;text-align:right}
+.og{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.06)}
+.oc{background:var(--gd);padding:2.8rem 2.2rem;position:relative;overflow:hidden;transition:background 0.3s}
+.oc:hover{background:rgba(255,255,255,0.04)}
+.onum{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:600;color:rgba(196,154,60,0.1);line-height:1;position:absolute;top:1.5rem;right:1.8rem}
+.oico{font-size:1.6rem;margin-bottom:1rem}
+.ot{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--w);margin-bottom:0.8rem;line-height:1.2}
+.od{font-size:0.87rem;font-weight:300;color:rgba(255,255,255,0.48);line-height:1.75}
+.ol{position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--go);transform:scaleX(0);transform-origin:left;transition:transform 0.35s}
+.oc:hover .ol{transform:scaleX(1)}
+
+/* JOURNEY */
+#journey{padding:7rem 5rem;background:var(--sand)}
+.jg{margin-top:4rem;display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--sd)}
+.jc{background:var(--w);padding:2.5rem;transition:transform 0.25s,box-shadow 0.25s}
+.jc:hover{transform:translateY(-3px);z-index:2;box-shadow:0 12px 36px rgba(0,0,0,0.08)}
+.jf{border-left:3px solid var(--go)}
+.jyr{font-size:0.65rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--go);margin-bottom:0.4rem}
+.jo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--gd);margin-bottom:0.2rem}
+.jr{font-size:0.7rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--tm);margin-bottom:1.1rem}
+.jd{font-size:0.88rem;font-weight:300;line-height:1.75;color:var(--tm)}
+.jrg{margin-top:1.2rem;display:inline-block;font-size:0.67rem;letter-spacing:1.5px;font-weight:500;padding:0.3rem 0.8rem;background:var(--gp);color:var(--gd)}
+
+/* COMMUNITY */
+#community{display:grid;grid-template-columns:1fr 1fr;background:var(--w);min-height:600px}
+.cc{padding:5.5rem 5rem;display:flex;flex-direction:column;justify-content:center;background:var(--gd)}
+.cb{margin-top:1.5rem;font-size:1rem;font-weight:300;line-height:1.85;color:rgba(255,255,255,0.55)}
+.csg{margin-top:2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.1)}
+.cs{padding:1.4rem;background:rgba(255,255,255,0.04)}
+.csn{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--gol);line-height:1}
+.csl{font-size:0.63rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.38);margin-top:0.3rem}
+.cbtns{margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap}
+.cic{position:relative;overflow:hidden}
+.cic img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(0.85)}
+.ciph{width:100%;height:100%;min-height:500px;background:linear-gradient(160deg,var(--gp),var(--gm));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
+
+/* BRANDS */
+#brands{padding:5.5rem 5rem;background:var(--sand);text-align:center}
+.brandstitle{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:400;letter-spacing:3px;text-transform:uppercase;color:var(--tm);margin-bottom:2.5rem}
+.bg2{display:flex;flex-wrap:wrap;justify-content:center;gap:1px;background:var(--sd);max-width:880px;margin:0 auto}
+.bi{background:var(--w);width:176px;height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.4rem;text-decoration:none;transition:background 0.25s}
+.bi:hover{background:var(--sand)}
+.bii{font-size:1.3rem}
+.bin{font-size:0.63rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--tm)}
+.bi:hover .bin{color:var(--gd)}
+
+/* GALLERY */
+#gallery{background:var(--gd);padding:0}
+.glb{padding:3rem 5rem 2rem;font-size:0.68rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--go);display:flex;align-items:center;gap:0.7rem}
+.glb::before{content:'';display:block;width:20px;height:1px;background:var(--go)}
+.gs{display:grid;grid-template-columns:repeat(5,1fr);gap:2px}
+.gi{position:relative;aspect-ratio:3/4;overflow:hidden}
+.gi img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.78) saturate(0.88);transition:transform 0.5s,filter 0.5s}
+.gi:hover img{transform:scale(1.06);filter:brightness(0.9) saturate(1)}
+.giph{width:100%;height:100%;background:var(--gm);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem}
+.gc{position:absolute;bottom:0;left:0;right:0;padding:0.6rem 0.8rem;background:linear-gradient(to top,rgba(28,58,43,0.9),transparent);font-size:0.6rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.55)}
+
+/* ACHIEVEMENTS */
+#achievements{padding:7rem 5rem;background:var(--w)}
+.ag{margin-top:4rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.ac2{padding:2rem;border:1px solid var(--sd);transition:border-color 0.25s,transform 0.25s}
+.ac2:hover{border-color:var(--go);transform:translateY(-3px)}
+.ai{font-size:1.8rem;margin-bottom:1rem}
+.an{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--gd);margin-bottom:0.5rem}
+.ad{font-size:0.85rem;font-weight:300;line-height:1.65;color:var(--tm)}
+
+/* CONTACT */
+#contact{background:var(--gd);display:grid;grid-template-columns:1fr 1fr}
+.cl{padding:6rem 5rem;border-right:1px solid rgba(255,255,255,0.07)}
+.cbody{margin-top:1.5rem;font-size:1rem;font-weight:300;line-height:1.85;color:rgba(255,255,255,0.5)}
+.citems{margin-top:2.5rem;display:flex;flex-direction:column;gap:0.9rem}
+.crow{display:flex;align-items:center;gap:1rem;text-decoration:none;color:rgba(255,255,255,0.55);font-size:0.9rem;font-weight:300;transition:color 0.25s}
+.crow:hover{color:var(--gol)}
+.cico{width:38px;height:38px;border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:0.95rem;flex-shrink:0;transition:border-color 0.25s}
+.crow:hover .cico{border-color:var(--go)}
+.cr{padding:6rem 5rem}
+.scg{margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.07)}
+.sc{background:var(--gd);padding:1.8rem;text-decoration:none;display:flex;flex-direction:column;gap:0.5rem;transition:background 0.25s}
+.sc:hover{background:rgba(255,255,255,0.05)}
+.sci{font-size:1.3rem}
+.scp{font-size:0.62rem;letter-spacing:2px;text-transform:uppercase;color:var(--go);font-weight:600}
+.sch{font-size:0.9rem;font-weight:500;color:var(--w)}
+.scd{font-size:0.78rem;font-weight:300;color:rgba(255,255,255,0.38);line-height:1.5}
+
+/* FOOTER */
+footer{background:#0F1C13;padding:2rem 5rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.05)}
+.fl{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--go)}
+.fc{font-size:0.68rem;letter-spacing:1px;color:rgba(255,255,255,0.22)}
+.flinks{display:flex;gap:1.5rem}
+.flinks a{font-size:0.67rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.28);text-decoration:none;transition:color 0.25s}
+.flinks a:hover{color:var(--go)}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 0.7s ease,transform 0.7s ease}
+.rv.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:0.1s}.d2{transition-delay:0.2s}.d3{transition-delay:0.3s}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem}
+  .nlinks,.ncta{display:none}
+  #hero{grid-template-columns:1fr}
+  .hl{padding:4rem 1.5rem 2rem}
+  .hr2{min-height:300px}
+  .statbar{flex-wrap:wrap}
+  .stat{flex:0 0 50%}
+  #about{grid-template-columns:1fr}
+  .aic{min-height:280px}
+  .ac{padding:3rem 1.5rem}
+  #offer{padding:4rem 1.5rem}
+  .oh{flex-direction:column;align-items:flex-start;gap:1rem}
+  .osub{text-align:left;max-width:100%}
+  .og{grid-template-columns:1fr}
+  #journey{padding:4rem 1.5rem}
+  .jg{grid-template-columns:1fr}
+  #community{grid-template-columns:1fr}
+  .cc{padding:4rem 1.5rem}
+  .cic{min-height:300px}
+  #brands{padding:4rem 1.5rem}
+  .gs{grid-template-columns:repeat(2,1fr)}
+  #achievements{padding:4rem 1.5rem}
+  .ag{grid-template-columns:1fr}
+  #contact{grid-template-columns:1fr}
+  .cl{padding:4rem 1.5rem;border-right:none;border-bottom:1px solid rgba(255,255,255,0.07)}
+  .cr{padding:4rem 1.5rem}
+  .scg{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:1rem;padding:1.5rem;text-align:center}
+  .flinks{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<nav id="nb">
+  <div class="nl">Prachi <span>S.</span></div>
+  <ul class="nlinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#offer">What I Do</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#community">Community</a></li>
+    <li><a href="#brands">Brands</a></li>
+  </ul>
+  <a href="#contact" class="ncta">Connect</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hl rv">
+    <span class="eyebrow">Outdoor Facilitator · Trek Leader · Content Creator</span>
+    <h1>Prachi<br><em>Shivangekar</em></h1>
+    <p class="htagline">Leading people through wild terrain — from the Sahyadris to the high Himalayas. Building communities, telling stories, and helping humans rediscover themselves in nature.</p>
+    <div class="hdiv"></div>
+    <div class="pills">
+      <span class="pill">Trek Leadership</span>
+      <span class="pill">Outdoor Facilitation</span>
+      <span class="pill">Brand Collaborations</span>
+      <span class="pill">Community Building</span>
+      <span class="pill">Content Creation</span>
+    </div>
+    <div class="hbtns">
+      <a href="#contact" class="bp">Work With Me</a>
+      <a href="#journey" class="bg">See My Journey</a>
+    </div>
+  </div>
+  <div class="hr2">
+    <!-- HERO PHOTO: replace this div with <img class="hphoto" src="your-photo.jpg" alt="Prachi on trek"> -->
+    <div class="hph"><div class="phi">&#127956;</div><div class="pht">Add your hero photo here</div></div>
+  </div>
+  <div class="statbar">
+    <div class="stat"><div class="sn">3+</div><div class="sl">Years on Trail</div></div>
+    <div class="stat"><div class="sn">80</div><div class="sl">Max Batch Size</div></div>
+    <div class="stat"><div class="sn">15+</div><div class="sl">Trails Led</div></div>
+    <div class="stat"><div class="sn">6+</div><div class="sl">Brand Collabs</div></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="aic">
+    <!-- ABOUT PHOTO: replace this div with <img src="your-about-photo.jpg" alt="Prachi Shivangekar"> -->
+    <div class="aiph"><div class="phi">&#127807;</div><div class="pht">Add your portrait photo here</div></div>
+    <div class="atf">Since 2022, on the trail</div>
+  </div>
+  <div class="ac rv">
+    <div class="slb">Who I Am</div>
+    <h2>Where mountains<br>meet <em>meaning</em></h2>
+    <p class="ab">I'm Prachi — an outdoor facilitator, trek leader, and community builder from Belgaum, Karnataka. With an <strong>MBA background</strong> and a deep love for wild places, I blend leadership, human connection, and adventure to create experiences that genuinely change people.</p>
+    <p class="ab" style="margin-top:1rem">From guiding <strong>children on high-altitude Himalayan treks</strong> to managing groups of 80 through monsoon terrain in the Sahyadris, I believe the outdoors is the greatest classroom. I collaborate with adventure brands and create content that brings the mountains to screens.</p>
+    <blockquote class="aq">"Every trail, every tent pitched, and every challenge faced reshaped my perspective on leadership, presence, and growth."</blockquote>
+    <div class="stags">
+      <span class="stag">Risk Management</span><span class="stag">Group Facilitation</span>
+      <span class="stag">Sustainable Practices</span><span class="stag">Camp Coordination</span>
+      <span class="stag">Youth Expeditions</span><span class="stag">Trail Discovery</span>
+      <span class="stag">Post-Trek Reflections</span><span class="stag">Operations &amp; Logistics</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I OFFER -->
+<section id="offer">
+  <div class="oh rv">
+    <div>
+      <div class="slb slb-w">What I Do</div>
+      <h2 class="w">Ways to work<br><em>together</em></h2>
+    </div>
+    <p class="osub">Whether you're a brand, a company, a school, or someone who just wants to trek — I bring expertise, heart, and deep respect for the wild.</p>
+  </div>
+  <div class="og">
+    <div class="oc rv"><div class="onum">01</div><div class="oico">&#9978;&#65039;</div><h3 class="ot">Trek Leadership &amp; Facilitation</h3><p class="od">Safe, immersive trek experiences from beginner day hikes to high-altitude Himalayan expeditions. Full logistics, safety, and group care — for any size.</p><div class="ol"></div></div>
+    <div class="oc rv d1"><div class="onum">02</div><div class="oico">&#128247;</div><h3 class="ot">Outdoor Content Creation</h3><p class="od">Authentic storytelling from the trail — reels, photos, reviews, and brand placements that connect real audiences to the outdoors on Instagram and YouTube.</p><div class="ol"></div></div>
+    <div class="oc rv d2"><div class="onum">03</div><div class="oico">&#129309;</div><h3 class="ot">Brand Collaborations</h3><p class="od">Partnering with adventure, gear, and lifestyle brands for genuine on-trail showcasing, reviews, and community-driven campaigns that resonate.</p><div class="ol"></div></div>
+    <div class="oc rv"><div class="onum">04</div><div class="oico">&#127970;</div><h3 class="ot">Corporate Outdoor Programs</h3><p class="od">Blending MBA and HR background with outdoor facilitation — team building retreats, leadership workshops, and experiential learning in nature for organisations.</p><div class="ol"></div></div>
+    <div class="oc rv d1"><div class="onum">05</div><div class="oico">&#127955;</div><h3 class="ot">Youth &amp; Children's Expeditions</h3><p class="od">Specialist high-altitude treks for children focused on psychological safety, resilience, and a lifelong connection with nature. Trained by InSOUL, Indiahikes.</p><div class="ol"></div></div>
+    <div class="oc rv d2"><div class="onum">06</div><div class="oico">&#128506;</div><h3 class="ot">Trail Discovery &amp; Documentation</h3><p class="od">Scouting, mapping, and documenting new trails across Sahyadri, Uttarakhand, and Himachal Pradesh — creating guides and resources for the outdoor community.</p><div class="ol"></div></div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey">
+  <div class="rv">
+    <div class="slb">Experience</div>
+    <h2>My journey<br>on the <em>trail</em></h2>
+  </div>
+  <div class="jg">
+    <div class="jc jf rv">
+      <div class="jyr">Mar 2025 – May 2025</div>
+      <div class="jo">Indiahikes — InSOUL</div>
+      <div class="jr">Intern · Assistant Trek Leader</div>
+      <p class="jd">Led children's groups on high-altitude Himalayan treks focusing on psychological safety and outdoor skills. Managed backend logistics, facilitated transformation, and helped children step beyond their comfort zones. A turning point in personal and professional growth.</p>
+      <span class="jrg">High Altitude Himalayas · Team of 35</span>
+    </div>
+    <div class="jc rv d1">
+      <div class="jyr">Jan 2024 – Present</div>
+      <div class="jo">Trekkers of Belgaum</div>
+      <div class="jr">Founder</div>
+      <p class="jd">Built a trekking community making the outdoors accessible across all age groups. Designed and led Sahyadri treks, South Goa adventures, and high-altitude expeditions to Kedarnath, Badrinath, Tungnath &amp; Chandrashila. Discovers and documents new trails.</p>
+      <span class="jrg">Sahyadri · Uttarakhand · Himachal · Goa</span>
+    </div>
+    <div class="jc rv">
+      <div class="jyr">Jan 2023 – Present</div>
+      <div class="jo">TIB Community</div>
+      <div class="jr">Freelance Trek Leader</div>
+      <p class="jd">Led weekend treks across Sahyadri for groups of 40–80 participants. Specialist treks for children and technical terrain — safety, emotional support, and transformation in all conditions including monsoon. Full logistics, route planning, and backend coordination.</p>
+      <span class="jrg">Harishchandragad · AMK · Ratangad · Kalasubai · Vasota</span>
+    </div>
+    <div class="jc rv d1">
+      <div class="jyr">Jun 2025</div>
+      <div class="jo">Shivsahyadri.trekkers &amp; Trail Makers</div>
+      <div class="jr">Freelance Outdoor Facilitator &amp; Trek Leader</div>
+      <p class="jd">End-to-end travel &amp; operations management, safety and risk management, group facilitation, sustainable practices, camp setup, post-trek reflections, and content creation.</p>
+      <span class="jrg">Himachal Pradesh · Uttarakhand</span>
+    </div>
+    <div class="jc rv">
+      <div class="jyr">Feb 2022 – May 2022</div>
+      <div class="jo">Indiahikes</div>
+      <div class="jr">Assistant Trek Leader</div>
+      <p class="jd">Delivered the Indiahikes experience across high-altitude treks. Managed end-to-end operations, safety, kitchen coordination, and facilitated meaningful on-trail reflections. Implemented green trail sustainability practices.</p>
+      <span class="jrg">Deoriatal Chandrashila · Kuari Pass</span>
+    </div>
+    <div class="jc rv d1">
+      <div class="jyr">Dec 2023 – Jan 2025</div>
+      <div class="jo">Accenture (Adecco)</div>
+      <div class="jr">HR Assistant · Experience Manager</div>
+      <p class="jd">Managed HR operations using Workday, CTA Onboarding &amp; ServiceNow. Led onboarding workflows, background verification, and campus initiatives — structured people management skills that now inform outdoor team leadership.</p>
+      <span class="jrg">Corporate HR · People Operations</span>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community">
+  <div class="cc rv">
+    <div class="slb slb-w">Community</div>
+    <h2 class="w">Trekkers of <em>Belgaum</em></h2>
+    <p class="cb">Founded in January 2024, Trekkers of Belgaum is a community built to make the outdoors accessible to everyone — across ages, fitness levels, and comfort zones. We organise treks, hikes, camping weekends, and high-altitude expeditions that bring people together through shared challenge and natural beauty.</p>
+    <p class="cb" style="margin-top:1rem">From monsoon scrambles in the Sahyadris to spiritual journeys to Kedarnath, every outing is designed to be more than a hike — it's a turning point.</p>
+    <div class="csg">
+      <div class="cs"><div class="csn">2024</div><div class="csl">Founded</div></div>
+      <div class="cs"><div class="csn">All Ages</div><div class="csl">Welcome</div></div>
+      <div class="cs"><div class="csn">KA</div><div class="csl">Based in Belgaum</div></div>
+      <div class="cs"><div class="csn">&#8734;</div><div class="csl">Trails to Explore</div></div>
+    </div>
+    <div class="cbtns">
+      <a href="https://www.instagram.com/trekkers_of_belgaum" target="_blank" class="bp">Follow the Community</a>
+      <a href="#contact" class="bg">Join a Trek</a>
+    </div>
+  </div>
+  <div class="cic">
+    <!-- COMMUNITY PHOTO: replace this div with <img src="your-community-photo.jpg" alt="Trekkers of Belgaum"> -->
+    <div class="ciph"><div class="phi">&#129309;</div><div class="pht">Add community group photo here</div></div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section id="brands">
+  <p class="brandstitle rv">Brands &amp; Collaborations</p>
+  <div class="bg2 rv">
+    <a href="https://www.adventureworx.in" target="_blank" class="bi"><span class="bii">&#129495;</span><span class="bin">Adventure Worx</span></a>
+    <a href="https://indiahikes.com" target="_blank" class="bi"><span class="bii">&#127956;</span><span class="bin">Indiahikes</span></a>
+    <a href="https://www.barenecessities.in" target="_blank" class="bi"><span class="bii">&#127807;</span><span class="bin">Bare Necessities</span></a>
+    <a href="#" class="bi"><span class="bii">&#128301;</span><span class="bin">Opticsfit</span></a>
+    <a href="#" class="bi"><span class="bii">&#128716;</span><span class="bin">Sleepezee</span></a>
+    <a href="https://www.decathlon.in" target="_blank" class="bi"><span class="bii">&#127945;</span><span class="bin">Decathlon</span></a>
+    <a href="#" class="bi"><span class="bii">&#128251;</span><span class="bin">Radio Refer</span></a>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="glb">From the Trail</div>
+  <div class="gs">
+    <!-- GALLERY PHOTOS: replace each .giph div with <img src="photo.jpg" alt="caption"> -->
+    <div class="gi"><div class="giph"><div class="phi">&#128247;</div><div class="pht">Trek photo 1</div></div><div class="gc">Himalayas</div></div>
+    <div class="gi"><div class="giph"><div class="phi">&#128247;</div><div class="pht">Trek photo 2</div></div><div class="gc">Sahyadri</div></div>
+    <div class="gi"><div class="giph"><div class="phi">&#128247;</div><div class="pht">Trek photo 3</div></div><div class="gc">Kedarnath</div></div>
+    <div class="gi"><div class="giph"><div class="phi">&#128247;</div><div class="pht">Trek photo 4</div></div><div class="gc">InSOUL</div></div>
+    <div class="gi"><div class="giph"><div class="phi">&#128247;</div><div class="pht">Trek photo 5</div></div><div class="gc">Community</div></div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="rv">
+    <div class="slb">Recognition</div>
+    <h2>Milestones &amp; <em>achievements</em></h2>
+  </div>
+  <div class="ag">
+    <div class="ac2 rv"><div class="ai">&#127956;</div><div class="an">Basic Mountaineering Course</div><p class="ad">Completed at Atal Bihari Vajpayee Institute of Mountaineering and Allied Sports — recommended for the Advanced Course upon completion.</p></div>
+    <div class="ac2 rv d1"><div class="ai">&#11088;</div><div class="an">Rising Star Performer</div><p class="ad">Awarded at Clariwell Global Services for outstanding performance and exceptional contribution to the team.</p></div>
+    <div class="ac2 rv d2"><div class="ai">&#127955;</div><div class="an">Best Sports Woman</div><p class="ad">Awarded at Gogte College of Commerce. University-level Badminton player and national-level athlete.</p></div>
+    <div class="ac2 rv"><div class="ai">&#9992;&#65039;</div><div class="an">NCC Air Squadron Cadet</div><p class="ad">Ex-CDT of 8 KAR AIR SQN NCC Belagum — instilling discipline, leadership, and a spirit of service from early on.</p></div>
+    <div class="ac2 rv d1"><div class="ai">&#127891;</div><div class="an">MBA — 7.78 CGPA</div><p class="ad">KLS Gogte Institute of Technology, 2021. Merging business acumen with outdoor leadership on every trek.</p></div>
+    <div class="ac2 rv d2"><div class="ai">&#127956;</div><div class="an">InSOUL Himalayan Internship</div><p class="ad">Led children's groups on high-altitude Himalayan treks through Indiahikes School of Outdoor Learning, 2025.</p></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="cl rv">
+    <div class="slb slb-w">Get In Touch</div>
+    <h2 class="w">Let's go on an <em>adventure</em></h2>
+    <p class="cbody">Open for brand collaborations, corporate outdoor programs, trek bookings, content creation partnerships, and community inquiries.</p>
+    <div class="citems">
+      <a href="tel:9481754811" class="crow"><div class="cico">&#128222;</div><span>+91 94817 54811</span></a>
+      <a href="mailto:prachishivangekar17@gmail.com" class="crow"><div class="cico">&#9993;&#65039;</div><span>prachishivangekar17@gmail.com</span></a>
+      <div class="crow"><div class="cico">&#128205;</div><span>Belgaum, Karnataka — 590006</span></div>
+      <a href="https://www.linkedin.com/in/prachi-shivangekar-442418166/" target="_blank" class="crow"><div class="cico">&#128188;</div><span>LinkedIn — Prachi Shivangekar</span></a>
+    </div>
+  </div>
+  <div class="cr rv d1">
+    <div class="slb slb-w">Follow My Journey</div>
+    <div class="scg">
+      <a href="https://www.instagram.com/gems_111_" target="_blank" class="sc"><div class="sci">&#128247;</div><div class="scp">Instagram · Personal</div><div class="sch">@gems_111_</div><div class="scd">My outdoor journey, brand collabs &amp; life on the trail</div></a>
+      <a href="https://www.instagram.com/trekkers_of_belgaum" target="_blank" class="sc"><div class="sci">&#127956;</div><div class="scp">Instagram · Community</div><div class="sch">@trekkers_of_belgaum</div><div class="scd">Community treks, events &amp; outdoor adventures</div></a>
+      <a href="https://www.youtube.com" target="_blank" class="sc"><div class="sci">&#127916;</div><div class="scp">YouTube</div><div class="sch">Trail Stories</div><div class="scd">Trek films, gear reviews &amp; mountain stories</div></a>
+      <a href="mailto:prachishivangekar17@gmail.com" class="sc"><div class="sci">&#128188;</div><div class="scp">Brand Inquiries</div><div class="sch">Collaborate</div><div class="scd">Open for brand partnerships &amp; sponsored treks</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fl">Prachi S. Shivangekar</div>
+  <div class="fc">&#169; 2025 &middot; Outdoor Facilitator &middot; Belgaum, Karnataka</div>
+  <div class="flinks"><a href="#hero">Top</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+</footer>
+
+<script>
+const els = document.querySelectorAll('.rv');
+const io = new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')}),{threshold:0.1});
+els.forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('#hero .rv').forEach(el=>el.classList.add('in')),80);
+window.addEventListener('scroll',()=>{
+  document.getElementById('nb').style.padding=window.scrollY>60?'0.7rem 4rem':'1.1rem 4rem';
+});
+</script>
+</body>
+</html>
